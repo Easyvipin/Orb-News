@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Orb News</title>
+  </head>
+  <body>
+    <!-- Loader  -->
+    <div class="loading">
+      <img src="img/loader.gif" id="loading-img" alt="" />
+    </div>
+    <!-- header -->
+    <header class="showcase">
+      <div class="content">
+        <img src="img/logo.png" alt="Orb news" class="logo" />
+        <div class="text">
+          A collection of card News
+        </div>
+        <button class="btn">Today News</button>
+      </div>
+    </header>
+
+    <!-- services -->
+
+    <section class="services">
+      <div class="container grid-3 center">
+        <div>
+          <i class="fas fa-broadcast-tower fa-3x"></i>
+          <h3>All news houses</h3>
+          <p>All the breaking news from hundreds of news channel</p>
+        </div>
+        <div>
+          <i class="fas fa-globe fa-3x"></i>
+          <h3>World news</h3>
+          <p>
+            International mews from global news channels
+          </p>
+        </div>
+        <div>
+          <i class="fas fa-braille fa-3x"></i>
+          <h3>Short News</h3>
+          <p>
+            If you're in hurry read the news card!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- news agencies -->
+    <section class="agencies">
+      <h2 class="center">CHANNELS</h2>
+      <div class="container-agencies grid-4 center">
+        <div class="each-agencies">
+          <img src="img/CNN.JPG" alt="" />
+        </div>
+        <div class="each-agencies">
+          <img src="img/NBC.png" alt="" />
+        </div>
+        <div class="each-agencies">
+          <img src="img/HT.webp" alt="" />
+        </div>
+        <div class="each-agencies">
+          <img src="img/ndtv.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- responsive catalog -->
+    <section class="responsive">
+      <div class="container grid-2 center">
+        <div class="res-design">
+          <img src="img/response.svg" alt="" />
+        </div>
+        <div class="desc">
+          <h1>Responsive.</h1>
+          <p>Works on every Browser and device</p>
+        </div>
+      </div>
+    </section>
+    <!-- about -->
+    <section class="about bg-light">
+      <div class="container">
+        <div class="grid-2">
+          <div class="center">
+            <i class="fas fa-universal-access fa-10x"></i>
+          </div>
+          <div>
+            <h3>About us</h3>
+            <p>
+              OrbNews is just a website which brings you news from every
+              continent of the world published or released by numbers of news
+              channels.OrbNews uses NewsApi for backend purposes.OrbNews just
+              made for those users who want to read short news in mean time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+
+    <footer>
+      <div class="container grid-3 center">
+        <div class="info">
+          <h3>CONTACT US</h3>
+          <a href="#">OrbNews.com</a>
+          <h3>Head office</h3>
+          <p>123 street,CA,USA</p>
+        </div>
+        <div class="socials center">
+          <h3 class="center">Follow us</h3>
+          <ul class="social-list">
+            <li class="social-each">
+              <a href="#"
+                ><img class="social-img" src="img/twitter.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-each">
+              <a href="#"
+                ><img class="social-img" src="img/GITHUB.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-each">
+              <a href="#"
+                ><img class="social-img" src="img/instagram.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="dev">
+          <img class="dev-img" src="img/dev.jpg" alt="Vipin chandra" />
+          <p>
+            A dev based in india with experience on React,php,Js like
+            technologies.
+          </p>
+          <p>Thank you for being on this Site</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function loader() {
+        window.addEventListener("load", (event) => {
+          console.log("check");
+          document.querySelector(".loading").style.display = "none";
+        });
+      }
+      setTimeout(loader(), 1000);
+    </script>
+  </body>
+</html>
