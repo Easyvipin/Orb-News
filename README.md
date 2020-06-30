@@ -18,3 +18,4 @@ A news website based on card reading styles and  uses newsApi at the back end.
 
 **See this Live
 [Orb News](https://orbnews.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ddcc9058-fa98-4925-8fc6-4ecae92de2cd/deploy-status)](https://app.netlify.com/sites/orbnews/deploys)
