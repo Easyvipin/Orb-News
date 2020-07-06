@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/news.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openSideMenu()">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="grey" stroke-width="5" />
+            <path d="M0,14 30,14" stroke="grey" stroke-width="5" />
+            <path d="M0,23 30,23" stroke="grey" stroke-width="5" />
+          </svg>
+        </a>
+      </span>
+      <div class="brand-name">
+        <h2>Orb News</h2>
+      </div>
+      <ul class="navbar-nav">
+        <li><a href="#headlines">News</a></li>
+        <li><a href="#covid">Covid-19</a></li>
+        <li><a href="#sports">Sports</a></li>
+        <li><a href="#Entertainment">Entertainment</a></li>
+      </ul>
+      <!-- mode  -->
+
+
+      <div class="dark-mode">
+        <button class="mode-btn" onclick="changeMode()"><img id="mode-img" src="./img/sun.png" alt=""></button>
+        </div>
+      </div>
+    </nav>
+    <!-- side menu -->
+
+
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+      <a href="#headlines">News</a>
+      <a href="#covid">Covid-19</a>
+      <a href="#sports">Sports</a>
+      <a href="#Entertainment">Entertainment</a>
+    </div>
+    <!-- content -->
+
+
+    <!-- showcase -->
+
+
+    <div class="showcase">
+      <div class="showcase-desc">
+        <p id="top-desc">
+          Listen the Top Headlines
+        </p>
+        <button class="btn-audio" onclick="playNews()">
+          <img src="img/play.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- News headlines -->
+    <h1 class="category">Headlines</h1>
+    <div class="container-news headlines"  id="headlines"></div>
+    <!-- covid - 19 -->
+    <h1 class="category">Covid-19 Updates</h1>
+    <div class="container-news "  id="covid"></div>
+    <!-- SPORTS -->
+
+    <h1 class="category">Sports</h1>
+    <div class="container-news " id="sports"></div>
+
+    <!-- eNTAINMENT -->
+
+    <h1 class="category">Entertainment</h1>
+    <div class="container-news  Entertainment"  id="Entertainment"></div>
+    <footer>
+      <div class="container grid-3 center bg-dark">
+        <div class="info">
+          <h3>CONTACT US</h3>
+          <a href="#">OrbNews.com</a>
+          <h3>Head office</h3>
+          <p>123 street,CA,USA</p>
+        </div>
+        <div class="socials center">
+          <h3 class="center">Follow us</h3>
+          <ul class="social-list">
+            <li class="social-each">
+              <a href="#"
+                ><img class="social-img" src="img/twitter.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-each">
+              <a href="#"
+                ><img class="social-img" src="img/GITHUB.svg" alt="" />
+              </a>
+            </li>
+            <li class="social-each">
+              <a href="#"
+                ><img class="social-img" src="img/instagram.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="dev">
+          <img class="dev-img" src="img/dev.jpg" alt="Vipin chandra" />
+          <p>
+            A dev based in india with experience on React,php,Js like
+            technologies.
+          </p>
+          <p>Thank you for being on this Site</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    const openSideMenu = () => {
+      document.getElementById("side-menu").style.transform = "translateX(0%)";
+      console.log("hello");
+    };
+    const closeSideMenu = () => {
+      document.getElementById("side-menu").style.transform =
+        "translateX(-100%)";
+    };
+/* change mode */
+let clicked=false;
+document.getElementById("mode-img").src="./img/sun.png";
+  const changeMode = () => {
+  if (clicked == false) {
+    trans();
+    document.getElementById("mode-img").src="./img/moon.png";
+    document.documentElement.setAttribute("data-theme", "dark");
+    clicked = true;
+  } else {
+    trans();
+    document.getElementById("mode-img").src="./img/sun.png";
+    document.documentElement.setAttribute("data-theme", "light");
+    clicked = false;
+  }
+  
+};
+/* tansition */
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
+  </script>
+  <script src="news.js"></script>
+</html>
