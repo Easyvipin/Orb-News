@@ -13,9 +13,13 @@ A news website based on card reading styles and  uses newsApi at the back end.
 ## Task to accomplished
 - [x] Elegant landing page
 - [x] News space
-- [ ] audio Top news
+- [x] audio Topnews
 - [x] dark mode
 
 **See this Live
 [Orb News](https://orbnews.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ddcc9058-fa98-4925-8fc6-4ecae92de2cd/deploy-status)](https://app.netlify.com/sites/orbnews/deploys)
+
+## Generate your own API KEY from Gnews to use this application
+[gnews.io](gnews.io)
+After generating the api key paste it in the `API_KEY` variable in news.js
