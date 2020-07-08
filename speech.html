@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Javascript Framework</h1>
+  </body>
+  <script>
+    const synth = window.speechSynthesis;
+    console.log(synth);
+    let voiceList = [];
+
+    let textToSpeak =
+      '"What unites Planned Parenthood, Kushner and Kanye? by cnn ",   "Citing violent crime in Atlanta ,  Georgia governor declares state of emergency and calls up National Guard "';
+    const showList = () => {
+      voiceList = synth.getVoices();
+      if (voiceList.length > 0) {
+        console.log(voiceList);
+        let speakText = new SpeechSynthesisUtterance(textToSpeak);
+
+        synth.speak(speakText);
+
+        /* to end the utterencies  */
+        speakText.onend = () => {
+          console.log("hello");
+          synth.cancel();
+        };
+      }
+    };
+    showList();
+    synth.onvoiceschanged = showList;
+    console.log(voiceList);
+  </script>
+</html>
